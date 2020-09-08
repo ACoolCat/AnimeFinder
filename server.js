@@ -7,7 +7,7 @@ const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config();
-const users = require('./controllers/users.js')
+const users = require('controllers/users.js')
 require('express-session')
 const session = require('express-session')
 app.use(session({
