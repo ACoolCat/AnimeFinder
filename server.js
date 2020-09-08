@@ -61,7 +61,7 @@ app.engine('html', require('ejs').renderFile);
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.render('index.html');
+  res.render('index.ejs');
 });
 
 //___________________
