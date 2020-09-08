@@ -7,6 +7,7 @@ const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config();
+const users = require('./controllers/users.js')
 require('express-session')
 const session = require('express-session')
 app.use(session({
@@ -54,6 +55,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.engine('html', require('ejs').renderFile);
+app.use('/users', users);
 
 
 //___________________
