@@ -17,7 +17,7 @@ users.post('/', (req, res) => {
       res.send('Something went wrong. Please try again later')
     } else{
       console.log('account created', createdUser);
-      res.redirect('../')
+      res.redirect('../..')
     }
   })
 })
