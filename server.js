@@ -64,6 +64,10 @@ app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
 
+app.get('/signup', (req, res) =>{
+  res.render('new.ejs')
+})
+
 //___________________
 //Listener
 //___________________
