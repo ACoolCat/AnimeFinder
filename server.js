@@ -7,6 +7,7 @@ const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config();
+const User = require('./models/users.js')
 require('express-session')
 const session = require('express-session')
 app.use(session({
@@ -61,11 +62,24 @@ app.engine('html', require('ejs').renderFile);
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.render('index.ejs');
+  User.find({}, (err, allUser) => {
+    res.render('index.ejs');
+  })
 });
 
 app.get('/signup', (req, res) =>{
   res.render('new.ejs')
+})
+
+app.post('/', (req, res) => {
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+  User.create(req.body, (err, createdUser) => {
+    if(err) {
+      res.send('Something went wrong. Please try again later')
+    } else{
+      res.redirect('/')
+    }
+  })
 })
 
 //___________________
