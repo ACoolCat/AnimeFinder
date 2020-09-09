@@ -18,6 +18,7 @@ $(() => {
     $next.on('click', (event) => {
       pageNum = pageNum + 1;
       $('.display').empty();
+      $('.scroll').empty();
     })
     $('.scroll').append($next)
 
