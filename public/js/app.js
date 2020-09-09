@@ -10,6 +10,7 @@ $(() => {
   //////////////////////////////////////////////////
   $('form').on('submit', (event) => {
     event.preventDefault();
+    $('.scroll').empty();
 
     const $next = $('<div>')
     console.log("I was created");
@@ -18,7 +19,6 @@ $(() => {
     $next.on('click', (event) => {
       pageNum = pageNum + 10;
       $('.display').empty();
-      $('.scroll').empty();
       finder()
     })
     $('.scroll').append($next)
