@@ -19,6 +19,7 @@ $(() => {
       pageNum = pageNum + 10;
       $('.display').empty();
       $('.scroll').empty();
+      finder()
     })
     $('.scroll').append($next)
 
