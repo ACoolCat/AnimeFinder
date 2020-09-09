@@ -1,7 +1,10 @@
 console.log("We are connected to js");
 
+
+
 $(() => {
 
+  let pageNum = 0
   /////////////////////////////////////////////////////
   ///////////SUBMIT FORM
   //////////////////////////////////////////////////
@@ -9,7 +12,6 @@ $(() => {
     event.preventDefault();
 
     const userInput = $('input[type="text"]').val()
-    let pageNum = 0
 
     ///////////////////////////////////////////////////
     //////////API
@@ -55,6 +57,13 @@ $(() => {
             $(event.currentTarget).prev().toggle()
           })
         }
+        const $next = $('<div>')
+        $next.append("Next Page")
+        $('.scroll').append($next)
+        $next.on('click', (event) => {
+          pageNum = pageNum + 1;
+          $('.display').empty();
+        })
 
       },
       (error) => {
@@ -64,61 +73,3 @@ $(() => {
 
   })
 } )
-
-const app = angular.module("AnimeController", [
-  "$http",
-
-  function($http) {
-    this.createUser = {};
-    this.users = [];
-    this.user = {};
-
-    this.showLoginForm = false;
-    this.showSignupForm = false;
-
-    this.loggedInUser = false;
-
-    //CREATE USER
-    this.createUser = () => {
-      $http({
-        method: "POST",
-        url: "/users",
-        data: this.createForm,
-      }).then(
-        (response) => {
-          this.createForm = {},
-          this.users.unshift(response.data);
-          this.loggedInUser = response.data;
-          this.showSignupForm = false;
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-    };
-
-    //LOG IN
-
-    this.login = () => {
-      console.log("I was hit");
-      $http({
-        url: "/session",
-        method: "POST",
-        data: {
-          username: this.loginUsername,
-          password: this.loginPassword,
-        },
-      }).then((response) => {
-        if (response.data.username) {
-          this.loggedInUser = response.data;
-          this.showLoginForm = false;
-        } else {
-          this.loginUsername = null;
-          this.loginPassword = null;
-        }
-      });
-    };
-
-    
-  }
-])
