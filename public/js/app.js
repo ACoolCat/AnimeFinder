@@ -16,7 +16,7 @@ $(() => {
     $next.addClass('next')
     $next.append("Next Page")
     $next.on('click', (event) => {
-      pageNum = pageNum + 1;
+      pageNum = pageNum + 10;
       $('.display').empty();
       $('.scroll').empty();
     })
