@@ -58,6 +58,7 @@ $(() => {
           })
         }
         const $next = $('<div>')
+        console.log("I was created");
         $next.addClass('next')
         $next.append("Next Page")
         $next.on('click', (event) => {
