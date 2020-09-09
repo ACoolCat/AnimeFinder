@@ -11,6 +11,16 @@ $(() => {
   $('form').on('submit', (event) => {
     event.preventDefault();
 
+    const $next = $('<div>')
+    console.log("I was created");
+    $next.addClass('next')
+    $next.append("Next Page")
+    $next.on('click', (event) => {
+      pageNum = pageNum + 1;
+      $('.display').empty();
+    })
+    $('.scroll').append($next)
+
     const userInput = $('input[type="text"]').val()
 
     ///////////////////////////////////////////////////
@@ -57,15 +67,6 @@ $(() => {
             $(event.currentTarget).prev().toggle()
           })
         }
-        const $next = $('<div>')
-        console.log("I was created");
-        $next.addClass('next')
-        $next.append("Next Page")
-        $next.on('click', (event) => {
-          pageNum = pageNum + 1;
-          $('.display').empty();
-        })
-        $('.scroll').append($next)
 
       },
       (error) => {
