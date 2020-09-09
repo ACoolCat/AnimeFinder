@@ -58,12 +58,13 @@ $(() => {
           })
         }
         const $next = $('<div>')
+        $next.addClass('next')
         $next.append("Next Page")
-        $('.scroll').append($next)
         $next.on('click', (event) => {
           pageNum = pageNum + 1;
           $('.display').empty();
         })
+        $('.scroll').append($next)
 
       },
       (error) => {
