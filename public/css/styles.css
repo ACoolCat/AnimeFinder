@@ -1,3 +1,7 @@
+* {
+  border: 1px solid gold
+}
+
 .info {
   background-color: blue;
   position: absolute;

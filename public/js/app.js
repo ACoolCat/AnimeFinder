@@ -12,6 +12,10 @@ $(() => {
     event.preventDefault();
     $('.scroll').empty();
 
+    /////////////////////////////////////////////////
+    //////////NEXT BUTTONS
+    ///////////////////////////////////////////////
+
     const $next = $('<div>')
     console.log("I was created");
     $next.addClass('next')
@@ -22,6 +26,10 @@ $(() => {
       finder()
     })
     $('.scroll').append($next)
+
+    ///////////////////////////////////////////////
+    ////////////////USER INPUT
+    /////////////////////////////////////////////
 
     const userInput = $('input[type="text"]').val()
 
