@@ -73,6 +73,7 @@ $(() => {
             })
             $('.display').append($info)
             const $image = $('<div>').append('<img src= "' + data.data[i].attributes.posterImage.small + '">')
+            $image.addClass('sight')
             $('.display').append($image)
             $image.on('click', (event) => {
               $(event.currentTarget).prev().toggle()

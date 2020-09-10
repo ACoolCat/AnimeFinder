@@ -58,6 +58,6 @@ p {
   width: 35px;
 }
 
-.image:hover{
+#image:hover{
   cursor: pointer;
 }
