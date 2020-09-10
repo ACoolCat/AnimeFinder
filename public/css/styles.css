@@ -45,3 +45,11 @@ p {
 #form  input[type=text]{
   background-color: grey;
 }
+
+#form button{
+  border: 1px solid white;
+}
+
+.scroll {
+  border: 1px solid white;
+}
