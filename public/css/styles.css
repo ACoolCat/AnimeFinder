@@ -39,6 +39,6 @@ p {
   grid-row-start: 1;
 }
 
-.display {
+.viewer {
   display: inline-block;
 }
