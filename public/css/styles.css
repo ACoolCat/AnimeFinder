@@ -55,7 +55,7 @@ p {
 
 .scroll {
   border: 1px solid white;
-  width: 50px;
+  width: 100px;
 }
 
 .scroll:hover {
