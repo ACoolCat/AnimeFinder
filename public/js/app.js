@@ -58,7 +58,7 @@ $(() => {
             console.log(data.data[i].attributes.canonicalTitle);
             const $title = $('<div>')
             $title.append(data.data[i].attributes.canonicalTitle)
-            $('.viewer').append($title)
+            $('.display').append($title)
             console.log(data.data[i].attributes.posterImage.small);
             const $info = $('<div>')
             $info.addClass('info')
@@ -71,9 +71,9 @@ $(() => {
             $info.on('click', (event) => {
               $(event.currentTarget).toggle();
             })
-            $('.viewer').append($info)
+            $('.display').append($info)
             const $image = $('<div>').append('<img src= "' + data.data[i].attributes.posterImage.small + '">')
-            $('.viewer').append($image)
+            $('.display').append($image)
             $image.on('click', (event) => {
               $(event.currentTarget).prev().toggle()
             })
