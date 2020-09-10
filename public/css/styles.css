@@ -1,7 +1,12 @@
 * {
   border: 1px solid gold;
   background-color: black;
-  color: white; 
+  color: white;
+}
+
+img {
+  width: 15vw;
+  height: 15vh;
 }
 
 .info {
