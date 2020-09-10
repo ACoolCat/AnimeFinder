@@ -58,6 +58,10 @@ p {
   width: 35px;
 }
 
+.scroll:hover {
+  cursor: pointer;
+}
+
 #image:hover{
   cursor: pointer;
 }
