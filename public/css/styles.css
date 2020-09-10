@@ -16,7 +16,7 @@ p {
 
 .info {
   background-color: blue;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -37,8 +37,4 @@ p {
 #form {
   grid-column-start: 3;
   grid-row-start: 1;
-}
-
-.display {
-  display: inline;
 }
