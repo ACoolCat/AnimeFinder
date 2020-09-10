@@ -9,6 +9,10 @@ img {
   height: 15vh;
 }
 
+p {
+  border: 0px;
+}
+
 .info {
   background-color: blue;
   position: absolute;
@@ -20,8 +24,8 @@ img {
 
 .search {
   display: grid;
-  grid-template-columns: 1000px auto auto;
-  grid-template-rows: 30% auto auto;
+  grid-template-columns: 100px auto auto;
+  grid-template-rows: auto auto;
 }
 
 #text {
