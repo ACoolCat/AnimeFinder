@@ -41,3 +41,7 @@ p {
   grid-column-start: 3;
   grid-row-start: 1;
 }
+
+#form  input[type=text]{
+  background-color: grey;
+}
