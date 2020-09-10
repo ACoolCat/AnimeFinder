@@ -20,7 +20,7 @@ img {
 
 .search {
   display: grid;
-  grid-template-columns: 30% auto auto;
+  grid-template-columns: 1000px auto auto;
   grid-template-rows: 30% auto auto;
 }
 
