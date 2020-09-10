@@ -1,5 +1,7 @@
 * {
-  border: 1px solid gold
+  border: 1px solid gold;
+  background-color: black;
+  color: ghost white; 
 }
 
 .info {
