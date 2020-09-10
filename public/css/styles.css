@@ -15,7 +15,7 @@ p {
 }
 
 .info {
-  background-color: blue;
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,6 +23,7 @@ p {
   width: 100%;
   text-align: center;
   z-index: 1;
+  font-size: 35px;
 }
 
 .search {
