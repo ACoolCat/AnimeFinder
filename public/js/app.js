@@ -71,7 +71,7 @@ $(() => {
             $info.on('click', (event) => {
               $(event.currentTarget).toggle();
             })
-            $('.content').append($info)
+            $('.display').append($info)
             const $image = $('<div>').append('<img src= "' + data.data[i].attributes.posterImage.small + '">')
             $('.display').append($image)
             $image.on('click', (event) => {

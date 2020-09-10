@@ -16,8 +16,8 @@ p {
 
 .info {
   background-color: blue;
-  position: fixed;
-  height: 200vh;
+  position: absolute;
+  height: 100%;
   width: 100%;
   text-align: center;
   z-index: 1;
